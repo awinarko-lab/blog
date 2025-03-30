@@ -1,0 +1,7 @@
+name = "blog"
+compatibility_date = "2023-06-14"
+
+[site]
+bucket = "./dist"
+
+pages_build_output_dir = "dist"

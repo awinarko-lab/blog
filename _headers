@@ -1,0 +1,17 @@
+/*
+  Content-Type: text/html
+
+/*.js
+  Content-Type: application/javascript
+
+/*.css
+  Content-Type: text/css
+
+/*.svg
+  Content-Type: image/svg+xml
+
+/*.jpg
+  Content-Type: image/jpeg
+
+/*.png
+  Content-Type: image/png

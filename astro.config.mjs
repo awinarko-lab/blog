@@ -1,9 +1,9 @@
 // @ts-check
 
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-import vercel from '@astrojs/vercel'
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
+import sitemap from '@astrojs/sitemap';
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import UnoCSS from 'unocss/astro'
@@ -12,7 +12,7 @@ import UnoCSS from 'unocss/astro'
 // import { visualizer } from 'rollup-plugin-visualizer'
 
 // Local integrations
-import { outputCopier } from './src/plugins/output-copier.ts'
+// import { outputCopier } from './src/plugins/output-copier.ts'
 // Local rehype & remark plugins
 import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.ts'
 // Shiki
@@ -36,8 +36,8 @@ export default defineConfig({
   // Adapter
   // https://docs.astro.build/en/guides/deploy/
   // 1. Vercel (serverless)
-  adapter: vercel(),
-  output: 'server',
+  // adapter: vercel(),
+  output: 'static',
   // 2. Vercel (static)
   // adapter: vercelStatic(),
   // 3. Local (standalone)
@@ -53,7 +53,7 @@ export default defineConfig({
 
   integrations: [
     // astro-pure will automatically add sitemap, mdx & tailwind
-    // sitemap(),
+    sitemap(),
     // mdx(),
     UnoCSS({ injectReset: true }),
     AstroPureIntegration(config),
@@ -64,9 +64,9 @@ export default defineConfig({
 
     // Temporary fix vercel adapter
     // static build method is not needed
-    outputCopier({
-      integ: ['sitemap', 'pagefind']
-    })
+    // outputCopier({
+    //   integ: ['sitemap', 'pagefind']
+    // })
   ],
   // root: './my-project-directory',
 
