@@ -9,6 +9,7 @@ A simple, fast and powerful blog theme built by Astro.
 [![GitHub Release](https://img.shields.io/github/v/release/cworld1/astro-theme-pure?include_prereleases&style=flat&label=template)](https://github.com/cworld1/astro-theme-pure/releases)
 [![GitHub License](https://img.shields.io/github/license/cworld1/astro-theme-pure?style=flat)](https://github.com/cworld1/astro-theme-pure/blob/main/LICENSE)
 
+
 ![image](./.github/assets/header.webp)
 ![image](./.github/assets/body.webp)
 
